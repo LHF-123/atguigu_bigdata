@@ -1,15 +1,13 @@
 package com.atguigu.juc;
 
 @FunctionalInterface
-interface Foo
-{
+interface Foo {
     //public void sayHello();
     public int add(int x,int y);
 
 
 
-    default int mul(int x,int y)
-    {
+    default int mul(int x,int y) {
         return x * y;
     }
 
@@ -31,8 +29,7 @@ interface Foo
  * 3    default
  * 4    static
  */
-public class LambdaExpressDemo02
-{
+public class LambdaExpressDemo02 {
     public static void main(String[] args)
     {
         /*Foo foo = new Foo()
