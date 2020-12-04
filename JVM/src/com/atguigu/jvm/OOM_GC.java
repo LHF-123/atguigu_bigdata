@@ -35,6 +35,14 @@ import java.util.Random;
  *  [ParOldGen: 7117K->1822K(7168K)] 8869K->1822K(9728K),
  *  [Metaspace: 3502K->3502K(1056768K)], 0.0049150 secs]
  *  [Times: user=0.00 sys=0.00, real=0.01 secs]
+ *
+ *  Minor GC和Full GC的区别
+ *      普通GC（minor GC）：只针对新生代区域的GC，指发生在新生代的垃圾收集动作，因为大多数Java对象的存活率都不高，
+ *              所以Minor GC非常频繁，一般回收速度也比较快
+ *
+ *      全局GC（major GC or Full GC）：指发生在老年代的垃圾收集动作，出现了Major GC，经常伴随至少一次的YGC
+ *             （但并不是绝对的）。Major GC的速度一般比Minor GC慢上10倍以上
+ *
  */
 public class OOM_GC {
 
